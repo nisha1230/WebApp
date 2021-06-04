@@ -6,30 +6,44 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .newStyle1 {
-            background-color: #FF9933;
+        
+        
+            .newStyle4 {
+            background-color: #FFCC99;
+            text-align: center;
+        }
+        
+        .newStyle6 {
+            color: #C0C0C0;
         }
     </style>
 </head>
-<body class="newStyle1">
+<body class="newStyle4">
     <form id="form1" runat="server">
-        <centre>
-        <div>
-            
-            <h1>
-                <asp:Label ID="Label4" runat="server" Text="Basic Calculator"></asp:Label>
-            </h1>
-        </div>
-        <h2>
-            <asp:Label ID="Label1" runat="server" Text="Home Page"></asp:Label>
-        </h2>
-        <p>
-            <asp:Label ID="Label2" runat="server" Text="operations"></asp:Label>
-        </p>
-        <p>
-            <asp:Label ID="Label3" runat="server" Text="previous operation"></asp:Label>
-        </p>
-        </centre>
+        
+        
+           
+                            <h1>
+                                <asp:Label ID="Label4" runat="server" Text="HomePage"></asp:Label>
+                            </h1>
+                        
+                    
+                        <h2>
+                            <asp:Label ID="Label1" runat="server" CssClass="newStyle6" Text="Welcome "></asp:Label>
+                        </h2>
+                  
+                        <p>
+                            &nbsp;</p>
+                   
+                        <p>
+                            <asp:Label ID="Label5" runat="server" Text="Thank you"></asp:Label>
+                        </p>
+                
+           
+                        <p>
+                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Logout" />
+                        </p>
+               
     </form>
 </body>
 </html>

@@ -23,7 +23,7 @@ namespace WebApp
         protected void btnSave_Click(object sender, EventArgs e)
         {
 
-           string UserName = txtUserName.Text;
+            string UserName = txtUserName.Text;
             if(string.IsNullOrEmpty(UserName))
             {
                 Response.Write("<script>alert('Please enter Username');</script>");
@@ -47,11 +47,10 @@ namespace WebApp
             DataSet da = new DataSet();
             cmd.Connection = con;
             sa.SelectCommand = cmd;
-            sa.Fill(da, "logdata");
+            sa.Fill(da, "Password");
 
            if (da.Tables[0].Rows.Count > 0) 
             {
-                Label2.Text= "loggin succesful";
                 Response.Redirect("WebForm2.aspx");
             }
             else 
