@@ -15,13 +15,20 @@ namespace WebApp
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label2.Text = Session["user"].ToString();
+            
+            if(Session["user"]== null)
+            {
+                Server.Transfer("LoginPage.aspx");
+            }
+           Label2.Text = Session["user"].ToString();
         }
        
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("LoginPage.aspx");
+            Session["user"] = null;
+          
+             Server.Transfer("LoginPage.aspx");
            
         }
     }
