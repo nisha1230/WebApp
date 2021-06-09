@@ -20,7 +20,7 @@ namespace WebApp
             
         }
 
-        protected void btnSave_Click(object sender, EventArgs e)
+        protected void buttonLogin_Click(object sender, EventArgs e)
         {
 
             string UserName = txtUserName.Text;
@@ -41,8 +41,10 @@ namespace WebApp
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand(); 
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = " select * from logdata where UserName='" + txtUserName.Text + "'and Password='" + txtPassword.Text + "'";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_CheckLoginDetails ";
+            cmd.Parameters.AddWithValue("@UserName",txtUserName.Text);
+            cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
             SqlDataAdapter sa = new SqlDataAdapter();
             DataSet da = new DataSet();
             cmd.Connection = con;
@@ -51,7 +53,8 @@ namespace WebApp
 
            if (da.Tables[0].Rows.Count > 0) 
             {
-                Response.Redirect("WebForm2.aspx");
+                Session["user"] = txtUserName.Text;
+                Response.Redirect("HomePage.aspx");
             }
             else 
             {

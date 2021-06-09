@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="WebApp.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="WebApp.WebForm2" %>
 
 <!DOCTYPE html>
 
@@ -33,7 +33,8 @@
                         </h2>
                   
                         <p>
-                            &nbsp;</p>
+                            <asp:Label ID="Label2" runat="server"></asp:Label>
+                            </p>
                    
                         <p>
                             <asp:Label ID="Label5" runat="server" Text="Thank you"></asp:Label>
@@ -41,7 +42,7 @@
                 
            
                         <p>
-                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Logout" />
+                            <asp:Button ID="ButtonLogout" runat="server" OnClick="Button1_Click" Text="Logout" />
                         </p>
                
     </form>

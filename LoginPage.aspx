@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApp.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="WebApp.WebForm1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <title>Basic Calculator</title>
+     <title>Login Page</title>
     <script src="jquery-3.6.0.js.js"></script>
 <script> 
     $(document).ready(function () {
@@ -59,7 +59,7 @@
             </dt>
         </dl>
         <p>
-            <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" style="margin-left: 80px" Text="Login" Width="101px" />
+            <asp:Button ID="buttonLogin" runat="server" OnClick="buttonLogin_Click" style="margin-left: 80px" Text="Login" Width="101px" />
         </p>
         <p>
                 <asp:Label ID="Label2" runat="server"></asp:Label>
