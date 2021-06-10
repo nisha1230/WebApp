@@ -13,6 +13,11 @@
             var UserName = $("#txtUserName").val();
             var password = $("#txtPassword").val();
 
+            if (UserName == "" && Password =="") {
+                alert("Please Enter UserName and password");
+                return false;
+            }
+
               if (UserName == "") {
                   alert("Please Enter UserName");
                   return false;
@@ -25,7 +30,7 @@
 
         })
     });
-    </script>
+</script>
   
        
     <style type="text/css">

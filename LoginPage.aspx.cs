@@ -46,10 +46,13 @@ namespace WebApp
             {
                 Session["user"] = txtUserName.Text;
                 Server.Transfer("HomePage.aspx");
+               // Label2.Text = "Check the data entered";
             }
             else 
             {
                 Label2.Text = "Check the data entered";
+                Session["user"] = txtUserName.Text;
+               // Server.Transfer("HomePage.aspx");*/
             }
             
         
