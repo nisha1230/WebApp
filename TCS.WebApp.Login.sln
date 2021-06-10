@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCS.WebForm.Login", "TCS.WebForm.Login.csproj", "{2F8BDB77-8A5A-4BDC-8B11-870B545DF667}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApplication", "LoginApplication.csproj", "{2F8BDB77-8A5A-4BDC-8B11-870B545DF667}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessAcessLayer", "..\BusinessAcessLayer\BusinessAcessLayer.csproj", "{172E68F7-4FC0-43F1-A6D8-5861ED24D0E4}"
 EndProject

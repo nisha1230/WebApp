@@ -37,20 +37,7 @@ namespace WebApp
                     return;
             }
 
-            //Database code
-            /*
-             SqlConnection con = new SqlConnection(connectionString);
-             con.Open();
-             SqlCommand cmd = new SqlCommand(); 
-             cmd.CommandType = CommandType.StoredProcedure;
-             cmd.CommandText = "sp_CheckLoginDetails ";
-             cmd.Parameters.AddWithValue("@UserName",txtUserName.Text);
-             cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
-             SqlDataAdapter sa = new SqlDataAdapter();
-             DataSet da = new DataSet();
-             cmd.Connection = con;
-             sa.SelectCommand = cmd;
-             sa.Fill(da, "Password"); */
+          
             BAL obj = new BAL();
             obj.UserName = txtUserName.Text;
             obj.Password = txtPassword.Text;
@@ -65,10 +52,8 @@ namespace WebApp
                 Label2.Text = "Check the data entered";
             }
             
-           // con.Close();
-          
-         
-            }
-        }
         
+        }
     }
+        
+}
